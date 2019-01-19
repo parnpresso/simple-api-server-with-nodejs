@@ -1,10 +1,10 @@
 FROM node:10
 
-ENV APPLICATION_ROOT /app/
+ENV APPLICATION_ROOT /app/api-server
 
-RUN mkdir $APPLICATION_ROOT
+RUN mkdir /app/
+ADD . /app/
+
 WORKDIR $APPLICATION_ROOT
-
-ADD . $APPLICATION_ROOT
 
 RUN npm install
