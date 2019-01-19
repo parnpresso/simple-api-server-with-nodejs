@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - '8000:8000'
+    volumes:
+      - ./api-server:/app/api-server
     entrypoint: bash -c 'chmod +x ../entrypoint.sh && ../entrypoint.sh'
   db:
     image: mongo
